@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <header className="header">
-        <div className="container">
+        <div className="nav-container">
           {/* Logo */}
           <div className="nav-logo">
             <Link href={"/"} passHref>

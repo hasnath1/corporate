@@ -1,0 +1,14 @@
+* {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+@layer base {
+  .gradient {
+    -webkit-text-fill-color: transparent;
+    @apply bg-gradient-to-r from-[#6B71FF] to-[#FF74E9] bg-clip-text fill-transparent w-fit;
+  }
+
+  .hover-gradient {
+    @apply from-[#a2a5ff] to-[#ffa9f2] hover:bg-gradient-to-r hover:text-white;
+  }
+}

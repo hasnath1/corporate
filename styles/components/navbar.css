@@ -3,8 +3,8 @@
     @apply fixed z-50 top-0 left-0 right-0 w-full bg-[#222222];
   }
 
-  .container {
-    @apply max-w-[1200px] mx-auto flex items-center justify-between h-20 px-4 lg:px-0;
+  .nav-container {
+    @apply max-w-7xl mx-auto flex items-center justify-between h-[72px] px-4 lg:px-0;
   }
 
   .nav-horizontal {
@@ -20,10 +20,10 @@
   }
 
   .nav-btn {
-    @apply flex flex-col justify-around w-8 h-8 cursor-pointer transition duration-300 lg:hidden;
+    @apply flex flex-col justify-around w-7 h-7 cursor-pointer transition duration-300 lg:hidden;
 
     span {
-      @apply h-[3px] bg-white rounded-full transition duration-300;
+      @apply h-[2px] bg-white rounded-full transition duration-300;
     }
   }
 
@@ -44,7 +44,7 @@
   }
 
   .nav-full {
-    @apply fixed flex flex-col justify-center items-center w-full h-screen bg-[#222222] transition duration-300 text-white;
+    @apply fixed top-0 left-0 flex flex-col justify-center items-center w-full h-screen bg-[#222222] transition duration-300 text-white;
   }
 
   .nav-vertical {
