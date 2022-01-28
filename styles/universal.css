@@ -11,4 +11,19 @@
   .hover-gradient {
     @apply from-[#a2a5ff] to-[#ffa9f2] hover:bg-gradient-to-r hover:text-white;
   }
+
+  .backdrop-full {
+    position: relative;
+  }
+  .backdrop-full::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    @apply backdrop-blur;
+  }
 }

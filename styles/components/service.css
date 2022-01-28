@@ -16,7 +16,7 @@
   .service-item-desc {
     @apply text-base lg:text-xl lg:leading-8 
     mt-4 lg:opacity-0 lg:translate-y-12 transition-all 
-    duration-300 ease-in-out lg:group-hover:translate-y-0 
+    duration-300 ease-out lg:group-hover:translate-y-0 
     lg:group-hover:opacity-100 lg:mt-8 lg:pr-8;
   }
 

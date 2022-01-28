@@ -26,11 +26,11 @@ const Hero = () => {
 
   return (
     <div
-      className="relative z-[5] bg-[#222222] text-white px-3 md:px-0 py-[100px] md:py-[130px] md:pt-[150px]"
+      className="relative text-white px-3 md:px-0 py-[100px] md:py-[130px] md:pt-[150px]"
       id="hero-trigger"
     >
       <svg
-        className="absolute right-0 -z-[1]"
+        className="absolute right-0 "
         width="944"
         height="455"
         viewBox="0 0 944 455"

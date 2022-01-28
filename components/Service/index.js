@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const Hero = () => {
+const Services = () => {
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     const anim = gsap.from(".service-item", {
@@ -23,7 +23,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="border border-blue-700 relative z-[5] bg-[#222222] text-white py-[50px] lg:py-[100px] overflow-hidden">
+    <div className="text-white py-[50px] lg:py-[100px] overflow-hidden">
       <section className="max-w-7xl mx-auto" id="service">
         <div className="service-ctn px-4 xl:px-0">
           <p className="gradient text-lg md:text-2xl uppercase">services</p>
@@ -79,4 +79,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Services;
