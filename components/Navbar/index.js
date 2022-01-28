@@ -1,12 +1,38 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
 
 const Navbar = () => {
   const [isClick, setIsClick] = useState(false);
+  const header = useRef(null);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      if (window.scrollY > 100) {
+        gsap.to(header.current, {
+          duration: 0.2,
+          background: "#222222",
+          height: 72,
+        });
+      } else {
+        gsap.to(header.current, {
+          duration: 0.2,
+          background: "transparent",
+          height: 80,
+        });
+      }
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  });
 
   return (
     <>
-      <header className="header">
+      <header className="header" ref={header}>
         <div className="nav-container">
           {/* Logo */}
           <div className="nav-logo">

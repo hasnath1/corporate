@@ -1,10 +1,36 @@
 import Link from "next/link";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Hero = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const anim = gsap.from(".hero-fade-up", {
+      scrollTrigger: {
+        trigger: ".hero-fade-up",
+        once: true,
+      },
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.4,
+      ease: "power3.out",
+    });
+
+    return () => {
+      anim.kill();
+    };
+  });
+
   return (
-    <div className="relative z-[5] bg-[#222222] mt-12 text-white py-[50px] md:py-[100px]">
+    <div
+      className="relative z-[5] bg-[#222222] text-white px-3 md:px-0 py-[100px] md:py-[130px] md:pt-[150px]"
+      id="hero-trigger"
+    >
       <svg
-        className="absolute -right-8 -z-[1]"
+        className="absolute right-0 -z-[1]"
         width="944"
         height="455"
         viewBox="0 0 944 455"
@@ -18,18 +44,20 @@ const Hero = () => {
       </svg>
 
       <section className="max-w-7xl mx-auto">
-        <div className="z-10 flex flex-col gap-y-6">
-          <p className="gradient text-lg md:text-[20px] uppercase">
+        <div className="z-10 flex flex-col gap-y-5 md:gap-y-7">
+          <p className="gradient text-lg md:text-[20px] uppercase hero-fade-up">
             Your idea, our expertise, perfect solution
           </p>
-          <h1 className="max-w-[930px] font-black leading-[36px] text-4xl md:leading-[40px] md:text-[40px] lg:text-[60px] lg:leading-[65px]">
+          <h1 className="max-w-[930px] font-black leading-[36px] text-3xl md:text-4xl md:leading-[40px] md:text-[40px] lg:text-[60px] lg:leading-[65px] hero-fade-up">
             Digital products design, custom software development, and technical
             consulting
           </h1>
-          <p className="text-lg md:text-[22px]">All you need in one place</p>
+          <p className="text-lg md:text-[22px] hero-fade-up">
+            All you need in one place
+          </p>
         </div>
         <Link href={"#contact"} passHref>
-          <a className="z-10 mt-8 flex justify-center items-center py-4 px-8 w-fit rounded-full bg-white text-xl text-black hover-gradient hover:text-white">
+          <a className="z-10 mt-8 md:mt-8 flex justify-center items-center py-4 px-8 w-fit rounded-full bg-white text-xl text-black hover-gradient hover:text-white hero-fade-up">
             Get in touch
           </a>
         </Link>

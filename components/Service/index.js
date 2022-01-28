@@ -1,47 +1,77 @@
-import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Hero = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const anim = gsap.from(".service-item", {
+      scrollTrigger: {
+        trigger: ".service-item",
+        once: true,
+      },
+      x: 100,
+      opacity: 0,
+      duration: 2,
+      stagger: 0.4,
+      ease: "power3.out",
+    });
+
+    return () => {
+      anim.kill();
+    };
+  });
+
   return (
-    <div className="border border-blue-700 relative z-[5] bg-[#222222] text-white py-[50px] md:py-[100px]">
-      <section className="max-w-7xl mx-auto">
-        <div className="z-10 flex justify-between gap-y-6">
-          <p className="gradient text-lg md:text-2xl uppercase">Our services</p>
-          <div className="flex flex-col items-end border border-red-600">
-            <article className="max-w-[750px] flex justify-between items-start gap-x-6">
-              <p className="gradient text-[22px] font-medium">01</p>
+    <div className="border border-blue-700 relative z-[5] bg-[#222222] text-white py-[50px] lg:py-[100px] overflow-hidden">
+      <section className="max-w-7xl mx-auto" id="service">
+        <div className="service-ctn px-4 xl:px-0">
+          <p className="gradient text-lg md:text-2xl uppercase">services</p>
+          <div className="px-4 lg:px-0 flex flex-col items-end services">
+            {/* -------------------------- */}
+            <article className="service-item group">
+              <p className="gradient service-item-num">01</p>
               <div>
-                <h1 className="text-[48px] font-black">Website Development</h1>
-                <p className="text-xl leading-8 mt-4">
+                <h1 className="service-item-title">Website Development</h1>
+                <p className="service-item-desc">
                   Web development is the work involved in developing a website
                   for the Internet (World Wide Web) or an intranet (a private
-                  network). Web development can range from developing.
+                  network). WWeb development can range from developing.eb
+                  development can range from developing.
                 </p>
               </div>
             </article>
+            {/* -------------------------- */}
 
-            <article className="mt-8 max-w-[750px] flex justify-between items-start gap-x-6">
-              <p className="gradient text-[22px] font-medium">01</p>
+            {/* -------------------------- */}
+            <article className="service-item mt-6 md:mt-10 group">
+              <p className="gradient service-item-num">02</p>
               <div>
-                <h1 className="text-[48px] font-black">Website Development</h1>
-                <p className="text-xl leading-8 mt-4">
+                <h1 className="service-item-title">Website Design</h1>
+                <p className="service-item-desc">
                   Web development is the work involved in developing a website
                   for the Internet (World Wide Web) or an intranet (a private
-                  network). Web development can range from developing.
+                  network). Web development can range from developing.Web
+                  development can range from developing.
                 </p>
               </div>
             </article>
+            {/* -------------------------- */}
 
-            <article className="mt-8 max-w-[750px] flex justify-between items-start gap-x-6">
-              <p className="gradient text-[22px] font-medium">01</p>
+            {/* -------------------------- */}
+            <article className="service-item mt-6 md:mt-10 group">
+              <p className="gradient service-item-num">03</p>
               <div>
-                <h1 className="text-[48px] font-black">Website Development</h1>
-                <p className="text-xl leading-8 mt-4">
+                <h1 className="service-item-title">Hosting Service</h1>
+                <p className="service-item-desc">
                   Web development is the work involved in developing a website
-                  for the Internet (World Wide Web) or an intranet (a private
-                  network). Web development can range from developing.
+                  for the Internet (World Wide Web) or an intranet (a privateWeb
+                  development can range from developing. network). Web
+                  development can range from developing.
                 </p>
               </div>
             </article>
+            {/* -------------------------- */}
           </div>
         </div>
       </section>
