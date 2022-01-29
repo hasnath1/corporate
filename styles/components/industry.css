@@ -1,0 +1,45 @@
+@layer base {
+  .backdrop-full {
+    position: relative;
+  }
+
+  .backdrop-full::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    @apply backdrop-blur-xl;
+  }
+
+  .industries-content {
+    @apply max-w-7xl mx-auto flex justify-between items-center absolute top-0 right-0 bottom-0 left-0 h-screen;
+  }
+
+  .industries-navigation {
+    @apply relative flex justify-center flex-col gap-y-6 text-white max-w-xl w-[30vw] backdrop-full after:w-[50vw] h-[100vh];
+  }
+
+  .industries-title {
+    @apply text-[27px] uppercase gradient z-10 pl-12;
+  }
+
+  .industries-btn-ctn {
+    @apply text-xl z-10 flex flex-col justify-around items-stretch;
+
+    button {
+      @apply flex items-center justify-start pl-12 ease-in-out hover:text-[#BDBDBD] duration-300 py-3;
+    }
+  }
+
+  .industries-card {
+    @apply relative flex justify-between flex-col gap-y-6 text-white max-w-xl p-10 backdrop-full;
+  }
+
+  .slider {
+    @apply absolute full -z-10;
+  }
+}
