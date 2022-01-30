@@ -95,6 +95,11 @@ const Industry = () => {
       btn.addEventListener("click", () => {
         sliderPlayer(index);
         i = index;
+
+        if (window.innerWidth < 1024) {
+          btn.scrollTo(0, 0);
+        }
+
         // Abort the interval when the user clicks on a button . Then restart it
         clearInterval(id);
         id = setInterval(sliderAutoPlayer, 4000);
@@ -107,7 +112,7 @@ const Industry = () => {
     };
   }, [data, data.length]);
   return (
-    <section className="relative z-10 h-screen overflow-hidden">
+    <section className="relative z-[5] h-screen overflow-hidden">
       {/*  Background slider */}
       <Slider {...settings} ref={slider} className="slider">
         {data.map(a => (

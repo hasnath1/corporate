@@ -1,6 +1,6 @@
 @layer base {
   .header {
-    @apply fixed z-50 top-0 left-0 right-0 w-full h-24 bg-transparent;
+    @apply fixed z-[999999999] top-0 left-0 right-0 w-full h-24 bg-transparent;
   }
 
   .nav-container {

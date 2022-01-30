@@ -26,11 +26,11 @@ const Hero = () => {
 
   return (
     <div
-      className="relative text-white px-3 md:px-0 py-[100px] md:py-[130px] md:pt-[150px]"
+      className="relative text-white px-3 lg:px-0 pb-[100px] pt-[140px] md:py-[130px] md:pt-[150px]"
       id="hero-trigger"
     >
       <svg
-        className="absolute right-0 "
+        className="absolute right-0 hidden lg:block"
         width="944"
         height="455"
         viewBox="0 0 944 455"
@@ -48,7 +48,7 @@ const Hero = () => {
           <p className="gradient text-lg md:text-[20px] uppercase hero-fade-up">
             Your idea, our expertise, perfect solution
           </p>
-          <h1 className="max-w-[930px] font-black leading-[36px] text-3xl md:text-4xl md:leading-[40px] md:text-[40px] lg:text-[60px] lg:leading-[65px] hero-fade-up">
+          <h1 className="max-w-[930px] font-black leading-[36px] text-3xl md:text-4xl md:leading-[40px] md:text-[40px] lg:text-[56px] lg:leading-[65px] hero-fade-up">
             Digital products design, custom software development, and technical
             consulting
           </h1>

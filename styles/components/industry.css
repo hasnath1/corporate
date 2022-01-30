@@ -16,27 +16,27 @@
   }
 
   .industries-content {
-    @apply max-w-7xl mx-auto flex justify-between items-center absolute top-0 right-0 bottom-0 left-0 h-screen;
+    @apply max-w-7xl mx-auto flex justify-between items-center absolute top-0 right-0 bottom-0 left-0 h-screen flex-col lg:flex-row;
   }
 
   .industries-navigation {
-    @apply relative flex justify-center flex-col gap-y-6 text-white max-w-xl w-[30vw] backdrop-full after:w-[50vw] h-[100vh];
+    @apply relative flex justify-center flex-col gap-y-6 text-white lg:w-[30vw] backdrop-full after:w-[100%] lg:after:w-[50vw] lg:h-[100vh] order-1 lg:order-2;
   }
 
   .industries-title {
-    @apply text-[27px] uppercase gradient z-10 pl-12;
+    @apply hidden text-[27px] uppercase gradient z-10 pl-12 lg:block;
   }
 
   .industries-btn-ctn {
-    @apply text-xl z-10 flex flex-col justify-around items-stretch;
+    @apply text-base lg:text-xl z-10 flex w-[100vw] lg:w-full lg:flex-col lg:justify-around lg:items-stretch overflow-x-scroll lg:overflow-x-hidden;
 
     button {
-      @apply flex items-center justify-start pl-12 ease-in-out hover:text-[#BDBDBD] duration-300 py-3;
+      @apply flex items-center justify-start px-6 py-4 min-w-max lg:w-[100%] lg:pl-12 ease-in-out lg:hover:text-[#BDBDBD] duration-300 lg:py-3;
     }
   }
 
   .industries-card {
-    @apply relative flex justify-between flex-col gap-y-6 text-white max-w-xl p-10 backdrop-full;
+    @apply relative flex justify-between flex-col gap-y-6 text-white max-w-xl p-10 backdrop-full order-2 lg:order-1;
   }
 
   .slider {

@@ -5,12 +5,9 @@
 @layer base {
   .gradient {
     -webkit-text-fill-color: transparent;
-    @apply bg-gradient-to-r from-[#6B71FF] to-[#FF74E9] bg-clip-text fill-transparent w-fit;
+    @apply bg-gradient-to-r from-[#999dff] to-[#9865ff] bg-clip-text fill-transparent w-fit;
   }
 
-  .hover-gradient {
-    @apply from-[#a2a5ff] to-[#ffa9f2] hover:bg-gradient-to-r hover:text-white;
-  }
   .full {
     @apply top-0 right-0 bottom-0 left-0;
   }

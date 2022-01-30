@@ -1,6 +1,6 @@
 @layer base {
   .ball {
-    background: linear-gradient(#6b71ff, #ff74e9);
+    background: linear-gradient(to right, #6290c8, #1f487e);
     animation: BallAnimation 20s ease-in-out infinite;
     @apply rounded-full w-[450px] h-[450px] fixed blur-[270px] right-0 top-0;
   }
