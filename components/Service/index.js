@@ -8,13 +8,14 @@ const Services = () => {
     const anim = gsap.from(".service-item", {
       scrollTrigger: {
         trigger: ".service-item",
+        start: "50px center",
         once: true,
       },
-      x: 100,
+      x: 250,
       opacity: 0,
-      duration: 2,
-      stagger: 0.4,
-      ease: "power3.out",
+      duration: 1.5,
+      stagger: 0.2,
+      ease: "power4.out",
     });
 
     return () => {

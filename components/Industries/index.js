@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Slider from "react-slick";
@@ -51,6 +52,29 @@ const Industry = () => {
       desc: "Internet culture, or cyberculture, is a culture that describes the many manifestations of the use of computer networks for communication, entertainment, business, and recreation. Some features of Internet culture include online communiti",
     },
   ];
+
+  useEffect(() => {
+    let anim = null;
+    if (window.innerWidth > 1024) {
+      gsap.registerPlugin(ScrollTrigger);
+      anim = gsap.from(".slider-btn", {
+        scrollTrigger: {
+          trigger: ".industries-content",
+          start: "150px center",
+          once: true,
+        },
+        duration: 0.25,
+        opacity: 0,
+        ease: "power0.easeNone",
+        x: "50",
+        stagger: 0.1,
+      });
+    }
+
+    return () => {
+      if (anim) anim.kill();
+    };
+  });
 
   useEffect(() => {
     let i = 0;

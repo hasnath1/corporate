@@ -9,21 +9,28 @@ const Navbar = () => {
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY > 100) {
+        gsap.to(".nav-btn", {
+          duration: 0.3,
+          width: "24px",
+          height: "24px",
+        });
+
         gsap.to(header.current, {
-          duration: 0.2,
+          duration: 0.5,
           background: "#222222",
           height: 72,
         });
       } else {
         gsap.to(header.current, {
-          duration: 0.2,
+          duration: 0.5,
           background: "transparent",
           height: 80,
         });
       }
     };
 
-    window.addEventListener("scroll", scrollHandler);
+    const data = window.addEventListener("scroll", scrollHandler);
+    console.log("DDDDDDDDDDDDDDDD", data);
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);

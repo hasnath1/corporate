@@ -12,11 +12,11 @@ const Hero = () => {
         trigger: ".hero-fade-up",
         once: true,
       },
-      y: 40,
+      y: 100,
       opacity: 0,
-      duration: 1,
-      stagger: 0.4,
-      ease: "power3.out",
+      duration: 1.5,
+      stagger: 0.2,
+      ease: "power4.out",
     });
 
     return () => {
@@ -25,7 +25,7 @@ const Hero = () => {
   });
 
   return (
-    <div
+    <section
       className="relative text-white px-3 lg:px-0 pb-[100px] pt-[140px] md:py-[130px] md:pt-[150px]"
       id="hero-trigger"
     >
@@ -62,7 +62,7 @@ const Hero = () => {
           </a>
         </Link>
       </section>
-    </div>
+    </section>
   );
 };
 
