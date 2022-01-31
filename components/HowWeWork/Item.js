@@ -1,12 +1,12 @@
 const Item = ({ title, body }) => {
   return (
-    <article className="flex flex-col justify-self-stretch items-center p-2 group">
+    <article className="flex-grow flex flex-col items-center p-2 group">
       <span className="block relative pb-[50%] w-full h-full overflow-hidden">
         <svg
           style={{ strokeDasharray: 2000 }}
           viewBox="0 0 500 500"
           fill="none"
-          className="absolute h-[200%] left-0 right-0 top-0 bottom-0 svg-line"
+          className="absolute h-[200%] w-full left-0 right-0 top-0 bottom-0 svg-line"
         >
           <circle
             cx="250"
@@ -31,10 +31,10 @@ const Item = ({ title, body }) => {
         </svg>
       </span>
 
-      <div className="flex items-center flex-col text-white lg:-translate-y-8 group-hover:lg:-translate-y-14 transition-all duration-300">
+      <div className="flex items-center flex-col text-white lg:-translate-y-8 group-hover:lg:-translate-y-14 transition-all duration-300 max-w-[345px]">
         <h1 className="font-black text-[38px]">{title}</h1>
-        <p className="text-center text-[17px] px-4 pt-2 lg:opacity-0 lg:translate-y-2 group-hover:lg:translate-y-0 group-hover:lg:opacity-100 transition-all duration-500">
-          {body}
+        <p className="text-center text-[17px] px-4 pt-4 lg:opacity-0 lg:translate-y-2 group-hover:lg:translate-y-0 group-hover:lg:opacity-100 transition-all duration-500 break-words">
+          {body.length > 180 ? body.slice(0, 180) + "..." : body}
         </p>
       </div>
     </article>
