@@ -1,36 +1,54 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
+import Item from "./Item";
 
 const Index = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from("#svg-line", {
-      duration: 3,
-      scrollTrigger: "#svg-line",
-      strokeDashoffset: 600,
+    const anim = gsap.from(".svg-line", {
+      duration: 1.5,
+      scrollTrigger: ".svg-line",
+      stagger: 0.4,
+      strokeDashoffset: 2000,
     });
 
-    return () => {};
+    return () => {
+      anim.kill();
+    };
   });
   return (
-    <section className="flex justify-center items-center">
-      <svg
-        id="svg-line"
-        style={{ strokeDasharray: 600 }}
-        width="386"
-        height="205"
-        viewBox="0 0 386 205"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 203.999C35 -58.9997 345.5 -67.9999 383 203.999"
-          stroke="white"
-          strokeWidth="5"
+    <section className="max-w-7xl mx-auto flex flex-col py-32" id="how">
+      <header className="text-white flex justify-between items-start">
+        <p className="gradient text-lg md:text-[20px] uppercase">How We Work</p>
+        <h1 className="max-w-[930px] font-black leading-[36px] text-3xl md:leading-[40px] md:text-[40px] lg:text-[52px] lg:leading-[65px]">
+          We are a team of talented website{" "}
+          <span className="gradient">developers &#38; designers </span> who help
+          people to grow
+        </h1>
+      </header>
+
+      <div className="flex mt-24 gap-8">
+        <Item
+          body={
+            "A prototype is an early sample, model, or release of a product built to test a concept or process. It is a term used in a variety of contexts, including semantics, design, electronics etc"
+          }
+          title={"Problem"}
         />
-      </svg>
+        <Item
+          body={
+            "A prototype is an early sample, model, or release of a product built to test a concept or process. It is a term used in a variety of contexts, including semantics, design, electronics etc"
+          }
+          title={"Prototype"}
+        />
+        <Item
+          body={
+            "A prototype is an early sample, model, or release of a product built to test a concept or process. It is a term used in a variety of contexts, including semantics, design, electronics etc"
+          }
+          title={"Solution"}
+        />
+      </div>
     </section>
   );
 };

@@ -7,21 +7,22 @@ const Navbar = () => {
   const header = useRef(null);
 
   useEffect(() => {
+    let anim1, anim2;
     const scrollHandler = () => {
       if (window.scrollY > 100) {
-        gsap.to(".nav-btn", {
+        anim1 = gsap.to(".nav-btn", {
           duration: 0.3,
           width: "24px",
           height: "24px",
         });
 
-        gsap.to(header.current, {
+        anim2 = gsap.to(header.current, {
           duration: 0.5,
           background: "#222222",
           height: 72,
         });
       } else {
-        gsap.to(header.current, {
+        anim1 = gsap.to(header.current, {
           duration: 0.5,
           background: "transparent",
           height: 80,
@@ -29,11 +30,12 @@ const Navbar = () => {
       }
     };
 
-    const data = window.addEventListener("scroll", scrollHandler);
-    console.log("DDDDDDDDDDDDDDDD", data);
+    addEventListener("scroll", scrollHandler);
 
     return () => {
-      window.removeEventListener("scroll", scrollHandler);
+      removeEventListener("scroll", scrollHandler);
+      if (anim1) anim1.kill();
+      if (anim2) anim2.kill();
     };
   });
 
