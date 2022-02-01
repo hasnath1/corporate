@@ -1,3 +1,23 @@
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #474a91;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999dff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 * {
   font-family: "Red Hat Display", sans-serif;
 }

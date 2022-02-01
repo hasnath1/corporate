@@ -60,13 +60,12 @@ const Industry = () => {
       anim = gsap.from(".slider-btn", {
         scrollTrigger: {
           trigger: ".industries-content",
-          start: "150px center",
           once: true,
         },
         duration: 0.25,
         opacity: 0,
-        ease: "power0.easeNone",
-        x: "50",
+        ease: "power3.out",
+        x: 80,
         stagger: 0.1,
       });
     }

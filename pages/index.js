@@ -4,6 +4,7 @@ import Hero from "../components/Hero/index.js";
 import Service from "../components/Service/index.js";
 import Industry from "../components/Industries/index.js";
 import HowWeWork from "../components/HowWeWork/index.js";
+import Achievements from "../components/Achievements/index.js";
 
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -52,6 +53,7 @@ const Index = () => {
       <Service />
       <Industry />
       <HowWeWork />
+      <Achievements />
     </div>
   );
 };
