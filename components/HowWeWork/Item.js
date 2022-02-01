@@ -1,7 +1,7 @@
 const Item = ({ title, body }) => {
   return (
-    <article className="flex-grow flex flex-col items-center p-2 group">
-      <span className="block relative pb-[50%] w-full h-full overflow-hidden">
+    <article className="w-1/2 min-w-fit lg:min-w-min lg:w-full flex-grow flex flex-col items-center p-2 group">
+      <span className="hidden relative lg:block pb-[50%] w-full h-full overflow-hidden">
         <svg
           style={{ strokeDasharray: 2000 }}
           viewBox="0 0 500 500"

@@ -8,7 +8,7 @@
   }
 
   .nav-horizontal {
-    @apply items-center justify-between gap-[18px] hidden lg:flex;
+    @apply items-center justify-between gap-6 hidden lg:flex;
   }
 
   .nav-logo {

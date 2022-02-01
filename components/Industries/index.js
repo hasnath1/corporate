@@ -136,7 +136,7 @@ const Industry = () => {
     };
   }, [data, data.length]);
   return (
-    <section className="relative z-[5] h-screen overflow-hidden">
+    <section className="relative z-[5] h-[500px] lg:h-screen overflow-hidden">
       {/*  Background slider */}
       <Slider {...settings} ref={slider} className="slider">
         {data.map(a => (
@@ -156,10 +156,10 @@ const Industry = () => {
 
       <div className="industries-content">
         <div className="industries-card">
-          <h1 className="text-5xl font-black z-10" ref={title}>
+          <h1 className="text-4xl lg:text-5xl font-black z-10" ref={title}>
             {data[0].title}
           </h1>
-          <p className="text-lg z-10" ref={description}>
+          <p className="text-base lg:text-lg z-10" ref={description}>
             {data[0].desc}
           </p>
           <Link href={"#contact"} passHref>
