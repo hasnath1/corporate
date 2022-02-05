@@ -1,7 +1,15 @@
+import Works from "./Works";
+
+const Divider = () => {
+  return (
+    <div className="my-14 h-[1px] bg-gradient-to-r from-[#999dff] to-[#9865ff] opacity-60"></div>
+  );
+};
+
 const Index = () => {
   return (
     <section className="max-w-7xl mx-auto">
-      <header className="text-white flex flex-col lg:flex-row px-4 lg:px-0 justify-between items-end">
+      <header className="text-white flex flex-col lg:flex-row px-4 lg:px-0 lg:justify-between lg:items-end pb-12 lg:pb-[85px]">
         <h1 className="font-black leading-[36px] text-3xl md:leading-[40px] md:text-[40px] lg:text-[48px] lg:leading-[65px]">
           We are proud of{" "}
           <span className="gradient">
@@ -9,10 +17,46 @@ const Index = () => {
             achievements
           </span>
         </h1>
-        <p className="gradient text-lg md:text-[20px] uppercase">
+        <p className="gradient text-lg md:text-[20px] uppercase hidden lg:block">
           Best solutions for your <br /> problems
         </p>
       </header>
+
+      <div>
+        <Works
+          title={"Crypto-Currency is the next currency of  future"}
+          subject={"Crypto currency"}
+          desc={
+            "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it"
+          }
+          img={"/achievements/1.png"}
+          uniqueID={"achievement-1"}
+        />
+
+        <Divider />
+
+        <Works
+          title={"Crypto-Currency is the next currency of  future"}
+          subject={"Digital Marketing"}
+          desc={
+            "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it"
+          }
+          img={"/achievements/2.png"}
+          uniqueID={"achievement-2"}
+        />
+
+        <Divider />
+
+        <Works
+          title={"Crypto-Currency is the next currency of  future"}
+          subject={"Online Banking"}
+          desc={
+            "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it"
+          }
+          img={"/achievements/4.png"}
+          uniqueID={"achievement-3"}
+        />
+      </div>
     </section>
   );
 };
