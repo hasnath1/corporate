@@ -5,6 +5,9 @@ import Service from "../components/Service/index.js";
 import Industry from "../components/Industries/index.js";
 import HowWeWork from "../components/HowWeWork/index.js";
 import Achievements from "../components/Achievements/index.js";
+import Contact from "../components/Contact/index.js";
+
+import Head from "next/head";
 
 import { useEffect } from "react";
 import { gsap } from "gsap";
@@ -46,15 +49,21 @@ const Index = () => {
   });
 
   return (
-    <div className="bg-[#222222]">
-      <BackgroundBall />
-      <Navbar />
-      <Hero />
-      <Service />
-      <Industry />
-      <HowWeWork />
-      <Achievements />
-    </div>
+    <>
+      <Head>
+        <title>Demo - 3 by Hasnath Abdullah Aknd</title>
+      </Head>
+      <div className="bg-[#222222]">
+        <BackgroundBall />
+        <Navbar />
+        <Hero />
+        <Service />
+        <Industry />
+        <HowWeWork />
+        <Achievements />
+        <Contact />
+      </div>
+    </>
   );
 };
 

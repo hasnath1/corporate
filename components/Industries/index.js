@@ -111,7 +111,7 @@ const Industry = () => {
       sliderPlayer(i);
     };
 
-    let id = setInterval(sliderAutoPlayer, 4000);
+    let id = setInterval(sliderAutoPlayer, 3000);
 
     const btns = document.querySelectorAll(".slider-btn");
     btns.forEach((btn, index) => {

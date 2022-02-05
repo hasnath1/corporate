@@ -1,0 +1,18 @@
+@layer base {
+  .contact-email {
+    @apply relative;
+  }
+
+  .contact-email::before {
+    content: "";
+
+    @apply -z-10 absolute bottom-[-8px] top-[100%] left-[-8px] right-[-8px] bg-gradient-to-r from-[#999dff] to-[#9865ff] block transition-all duration-300;
+  }
+
+  .contact-email:hover::before {
+    @apply top-0;
+  }
+}
+.input-field-focused {
+  @apply -translate-y-1 -translate-x-5 scale-90;
+}
