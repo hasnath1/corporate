@@ -13,7 +13,7 @@ const Works = ({ img, subject, title, desc, uniqueID }) => {
       duration: 1,
 
       scrollTrigger: {
-        trigger: `#${uniqueID}-sub`,
+        trigger: `#${uniqueID}-ctn`,
         start: "-100px center",
       },
       ease: "power3.out",
@@ -41,7 +41,10 @@ const Works = ({ img, subject, title, desc, uniqueID }) => {
   });
 
   return (
-    <div className="flex flex-col p-4 lg:p-0 lg:flex-row justify-between gap-x-16 text-white overflow-hidden">
+    <div
+      className="flex flex-col p-4 lg:p-0 lg:flex-row justify-between gap-x-16 text-white overflow-hidden"
+      id={`${uniqueID}-ctn`}
+    >
       <div
         className="flex-grow lg:min-w-[700px] opacity-100 translate-x-0"
         id={`${uniqueID}-img`}
