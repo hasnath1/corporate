@@ -1,5 +1,9 @@
 import Works from "./Works";
 
+import img1 from "../../public/achievements/1.png";
+import img2 from "../../public/achievements/2.png";
+import img3 from "../../public/achievements/4.png";
+
 const Divider = () => {
   return (
     <div className="my-14 h-[1px] bg-gradient-to-r from-[#999dff] to-[#9865ff] opacity-60"></div>
@@ -29,7 +33,7 @@ const Index = () => {
           desc={
             "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it"
           }
-          img={"/achievements/1.png"}
+          img={img1}
           uniqueID={"achievement-1"}
         />
 
@@ -41,7 +45,7 @@ const Index = () => {
           desc={
             "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it"
           }
-          img={"/achievements/2.png"}
+          img={img2}
           uniqueID={"achievement-2"}
         />
 
@@ -53,7 +57,7 @@ const Index = () => {
           desc={
             "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it"
           }
-          img={"/achievements/4.png"}
+          img={img3}
           uniqueID={"achievement-3"}
         />
       </div>
