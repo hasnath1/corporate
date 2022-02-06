@@ -4,8 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Hero = () => {
-  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     // Mouse Enter Handler
     const mouseOverHandler = e => {
       gsap.to(e.target, {
