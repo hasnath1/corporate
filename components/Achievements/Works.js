@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -47,7 +46,7 @@ const Works = ({ img, subject, title, desc, uniqueID }) => {
       <div className="flex-grow-[100%] lg:min-w-[700px]" id={`${uniqueID}-img`}>
         <Image
           src={img}
-          priority
+          priority={true}
           width={746}
           height={525}
           alt={title}
