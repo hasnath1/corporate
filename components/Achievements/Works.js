@@ -1,12 +1,12 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Works = ({ img, subject, title, desc, uniqueID }) => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
+  useEffect(() => {
     const anim = gsap.from(`#${uniqueID}-img`, {
       x: -150,
       opacity: 0,
@@ -44,14 +44,8 @@ const Works = ({ img, subject, title, desc, uniqueID }) => {
   return (
     <div className="flex flex-col p-4 lg:p-0 lg:flex-row justify-between gap-x-16 text-white overflow-hidden">
       <div className="flex-grow-[100%] lg:min-w-[700px]" id={`${uniqueID}-img`}>
-        <Image
-          src={img}
-          priority={true}
-          width={746}
-          height={525}
-          alt={title}
-          layout="responsive"
-        />
+        {/* // eslint-disable-next-line @next/next/no-img-element */}
+        <img src={img} width={746} height={525} alt={title} />
       </div>
 
       <div className="flex flex-col mt-4 gap-y-6 lg:mt-0 lg:gap-y-16 lg:max-w-[440px]">
