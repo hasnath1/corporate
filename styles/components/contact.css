@@ -1,6 +1,6 @@
 @layer base {
   .contact-email {
-    @apply relative;
+    @apply relative mt-3;
   }
 
   .contact-email::before {
@@ -10,9 +10,13 @@
   }
 
   .contact-email:hover::before {
-    @apply top-0;
+    @apply top-[-8px];
   }
 }
 .input-field-focused {
-  @apply -translate-y-1 -translate-x-5 scale-90;
+  @apply -translate-y-1 -translate-x-4 scale-90;
+}
+
+.input-focused {
+  @apply border-black;
 }

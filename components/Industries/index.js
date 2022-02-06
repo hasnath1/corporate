@@ -62,6 +62,7 @@ const Industry = () => {
           trigger: ".industries-content",
           once: true,
         },
+        delay: 0.1,
         duration: 0.25,
         opacity: 0,
         ease: "power3.out",

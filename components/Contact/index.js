@@ -1,9 +1,9 @@
-import Input from "./Input";
+import Form from "./Form";
 
 const Index = () => {
   return (
-    <section className="relative z-[5] bg-[#222222]" id="contact">
-      <div className="max-w-7xl mx-auto border-8 border-white flex gap-x-12">
+    <section className="relative z-[5] py-28" id="contact">
+      <div className="max-w-7xl mx-auto flex flex-col px-4 lg:px-0 lg:flex-row gap-x-[180px]">
         <div className="text-white flex flex-col gap-y-8">
           <h1 className="font-black text-5xl">Contact us</h1>
 
@@ -45,7 +45,7 @@ const Index = () => {
           <div>
             <p className="text-lg">Become a client</p>
             <a
-              className="underline text-2xl font-black contact-email w-fit block"
+              className="text-base md:text-xl lg:text-2xl font-black contact-email w-fit block"
               href="mailto:abdullahaknd297@gmail.com"
             >
               YOUREMAIL@EXAMPLE.COM
@@ -53,35 +53,8 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="bg-white flex-grow">
-          <form className=" text-black p-[58px]">
-            <h1 className="uppercase text-2xl font-black">
-              Let me create a <br />
-              website for you
-            </h1>
-
-            <div className="grid grid-cols-2 gap-x-8">
-              <div>
-                <Input placeholder="Your Full Name*" id="name" />
-              </div>
-
-              <div>
-                <Input placeholder="Your Phone Number*" id="number" />
-              </div>
-
-              <div>
-                <Input placeholder="Your Email*" id="email" />
-              </div>
-
-              <div>
-                <Input placeholder="Your Company" id="company" />
-              </div>
-
-              <div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </div>
-            </div>
-          </form>
+        <div className="bg-white mt-8 lg:mt-0 flex-grow">
+          <Form />
         </div>
       </div>
     </section>

@@ -5,6 +5,35 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    // Mouse Enter Handler
+    const mouseOverHandler = e => {
+      gsap.to(e.target, {
+        background: "linear-gradient(to right,#a999df,#6290C8)",
+        color: "#FFFFFF",
+        duration: 0.5,
+        ease: "power4.out",
+      });
+    };
+
+    // Mouse Leave Handler
+    const mouseLeaveHandler = e => {
+      gsap.to(e.target, {
+        background: "white",
+        color: "black",
+        duration: 0.5,
+      });
+    };
+
+    const elt = document.getElementById("hover-gradient");
+    elt.addEventListener("mouseover", mouseOverHandler);
+    elt.addEventListener("mouseout", mouseLeaveHandler);
+
+    return () => {
+      elt.removeEventListener("mouseover", mouseOverHandler);
+      elt.removeEventListener("mouseout", mouseLeaveHandler);
+    };
+  });
 
   useEffect(() => {
     const anim = gsap.from(".hero-fade-up", {
@@ -57,7 +86,10 @@ const Hero = () => {
           </p>
         </div>
         <Link href={"#contact"} passHref>
-          <a className="z-10 mt-8 md:mt-8 flex justify-center items-center py-4 px-8 w-fit rounded-full bg-white text-xl text-black hover-gradient hover:text-white hero-fade-up">
+          <a
+            className="z-10 mt-8 md:mt-8 flex justify-center items-center py-4 px-8 w-fit rounded-full bg-white text-xl text-black hover:text-white hero-fade-up"
+            id="hover-gradient"
+          >
             Get in touch
           </a>
         </Link>

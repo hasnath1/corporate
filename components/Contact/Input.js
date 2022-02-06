@@ -10,11 +10,13 @@ const Input = ({ id, placeholder }) => {
 
     const onFocus = () => {
       label.classList.add("input-field-focused");
+      input.classList.add("input-focused");
     };
 
     const onBlur = () => {
       if (!input.value) {
         label.classList.remove("input-field-focused");
+        input.classList.remove("input-focused");
       }
     };
 
@@ -32,7 +34,7 @@ const Input = ({ id, placeholder }) => {
   }, []);
 
   return (
-    <div className="relative text-[17px] font-medium">
+    <div className="relative text-[17px]">
       <label
         htmlFor={`input-${id}`}
         className="block translate-y-5 transition w-full text-[#555555] cursor-pointer"
@@ -42,7 +44,7 @@ const Input = ({ id, placeholder }) => {
         {placeholder}
       </label>
       <input
-        className="outline-none border-b border-[#777777] block w-full pb-2 text-[#333333] font-medium"
+        className="transition-all duration-75 outline-none border-b border-[#CCCCCC] block w-full pb-2 text-[#333333]"
         type={"text"}
         id={`input-${id}`}
         ref={inputRef}
