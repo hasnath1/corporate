@@ -15,6 +15,7 @@ const Works = ({ img, subject, title, desc, uniqueID }) => {
       scrollTrigger: {
         trigger: `#${uniqueID}-ctn`,
         start: "-100px center",
+        immediateRender: false,
       },
       ease: "power3.out",
     });
