@@ -12,7 +12,7 @@ const Divider = () => {
 
 const Index = () => {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto" id="projects">
       <header className="text-white flex flex-col lg:flex-row px-4 lg:px-0 lg:justify-between lg:items-end pb-12 lg:pb-[85px]">
         <h1 className="font-black leading-[36px] text-3xl md:leading-[40px] md:text-[40px] lg:text-[48px] lg:leading-[65px]">
           We are proud of{" "}

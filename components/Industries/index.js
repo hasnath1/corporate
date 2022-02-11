@@ -136,7 +136,10 @@ const Industry = () => {
     };
   }, [data, data.length]);
   return (
-    <section className="relative z-[5] h-[500px] lg:h-screen overflow-hidden">
+    <section
+      className="relative z-[5] h-[500px] lg:h-screen overflow-hidden"
+      id="industries"
+    >
       {/*  Background slider */}
       <Slider {...settings} ref={slider} className="slider">
         {data.map(a => (
@@ -163,7 +166,7 @@ const Industry = () => {
             {data[0].desc}
           </p>
           <Link href={"#contact"} passHref>
-            <a className="z-10 flex justify-center items-center py-4 px-8 w-fit rounded-full bg-white text-xl text-black hover-gradient hover:text-white">
+            <a className="z-10 flex justify-center items-center py-4 px-8 w-fit rounded-full bg-white text-xl text-black hover-gradient ">
               Get in touch
             </a>
           </Link>

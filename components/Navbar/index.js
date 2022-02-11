@@ -1,10 +1,36 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
 const Navbar = () => {
   const [isClick, setIsClick] = useState(false);
   const header = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollToPlugin);
+    const clickHandler = e => {
+      e.preventDefault();
+      const href = e.target.href.split("#")[1];
+      console.log(href);
+      gsap.to(window, {
+        duration: 1,
+        ease: "power2.out",
+        scrollTo: `#${href}`,
+      });
+    };
+
+    const links = document.querySelectorAll(".nav-horizontal-link");
+    links.forEach(link => {
+      link.addEventListener("click", clickHandler);
+    });
+
+    () => {
+      links.forEach(link => {
+        link.removeEventListener("click", clickHandler);
+      });
+    };
+  });
 
   useEffect(() => {
     let anim1, anim2;
