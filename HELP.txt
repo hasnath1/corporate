@@ -1,0 +1,62 @@
+░░░ ▄▄▄░░░░░ ░▄▄▄░░░░
+░░▀▀──▀▀░░░▀▀──▀▀░░░░
+░▀▀────▀▀░▀▀────▀▀░░░
+░▀▀── THANK YOU──▀▀░░
+░░▀▀───────────▀▀░░░░
+░░░░▀▀───────▀▀░░░░░░
+░░░░░░▀▀───▀▀░░░░░░░░
+░░░░░░░▀▀─▀▀░░░░░░░░░
+░░░░░░░░░▀▀ ░░░░░░░░░
+
+*************** Thank you for purchasing this template ******
+
+Here are the top features :
+  1. NextJS         ->  12.0.7 (latest)
+  2. React          ->  17.0.2 (latest)
+  3. React-dom      ->  17.0.2 (latest)
+  3. TailwindCSS    ->  3.0.11 (latest)
+  4. NodeJS         ->  16.13.0
+  5. npm            ->  8.1.2
+  6. Responsive Design
+  7. Image not include
+
+HOW TO GET STARTED : 
+  1. Open your terminal . 
+      TIP : 
+        1. On Windows -> WIN + X I
+        2. On Linux   -> CTRL + SHIFT + T
+  2. Go to the directory where you unzipped the template files.
+  3. Then Run the following commands :
+      ` npm install `
+      ` npm run dev `
+  4. Open your browser and go to http://localhost:3000
+  5. Enjoy !!!  
+
+****** Please give me 5 star . This will inspire to make more templates *****
+
+     ******       ******
+   **********   **********
+ ************* *************
+*****************************
+*****************************
+*****************************
+ ***************************
+   ***********************
+     *******************
+       ***************
+         ***********
+           *******
+             ***
+              *
+
+Found a bug or having problem ?
+    1. themeforest -> https://themeforest.net/user/hasnathabdullah
+    2. Send me a message , so that I can fix it .
+
+******* I would try my best to help you *******
+       ___                  ____                  ___
+  ____(   \              .-'    `-.              /   )____
+ (____     \_____       /  (O  O)  \       _____/     ____)
+(____            `-----(      )     )-----'            ____)
+ (____     _____________\  .____.  /_____________     ____)
+   (______/              `-.____.-'              \______)
