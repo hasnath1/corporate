@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 const Preloader = () => {
   useEffect(() => {
-    window.onload = () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const preloader = document.querySelector(".preloader");
       gsap.to(preloader, {
         opacity: 0,
@@ -13,7 +13,7 @@ const Preloader = () => {
           preloader.style.display = "none";
         },
       });
-    };
+    });
   });
   return (
     <div className="preloader">
